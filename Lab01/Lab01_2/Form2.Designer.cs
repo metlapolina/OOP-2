@@ -125,9 +125,9 @@
             // listViewOne
             // 
             this.listViewOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listViewOne.Location = new System.Drawing.Point(62, 276);
+            this.listViewOne.Location = new System.Drawing.Point(48, 276);
             this.listViewOne.Name = "listViewOne";
-            this.listViewOne.Size = new System.Drawing.Size(183, 150);
+            this.listViewOne.Size = new System.Drawing.Size(205, 173);
             this.listViewOne.TabIndex = 11;
             this.listViewOne.UseCompatibleStateImageBehavior = false;
             this.listViewOne.View = System.Windows.Forms.View.List;
@@ -135,9 +135,9 @@
             // listViewTwo
             // 
             this.listViewTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listViewTwo.Location = new System.Drawing.Point(307, 276);
+            this.listViewTwo.Location = new System.Drawing.Point(293, 276);
             this.listViewTwo.Name = "listViewTwo";
-            this.listViewTwo.Size = new System.Drawing.Size(183, 150);
+            this.listViewTwo.Size = new System.Drawing.Size(205, 173);
             this.listViewTwo.TabIndex = 12;
             this.listViewTwo.UseCompatibleStateImageBehavior = false;
             this.listViewTwo.View = System.Windows.Forms.View.List;
@@ -146,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 438);
+            this.ClientSize = new System.Drawing.Size(553, 469);
             this.Controls.Add(this.listViewTwo);
             this.Controls.Add(this.listViewOne);
             this.Controls.Add(this.labelSizeOfCollection);

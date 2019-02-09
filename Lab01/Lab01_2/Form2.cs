@@ -113,8 +113,10 @@ namespace Lab01_2
                 }
                 else
                 {
+                    listViewTwo.Items.Add("Students from 1st course POIT:");
                     var query = collection
                         .Where(p => p.course == 1)
+                        .Where(p => p.group >= 4 && p.group <= 6)
                         .Select(p => p);
                     foreach (var s in query)
                     {
@@ -139,8 +141,9 @@ namespace Lab01_2
                 }
                 else
                 {
+                    listViewTwo.Items.Add("Students ISiT:");
                     var query = collection
-                        .Where(p => p.course == 4)
+                        .Where(p => p.group >= 1 && p.group <= 3)
                         .Select(p => p);
                     foreach (var s in query)
                     {
@@ -165,10 +168,11 @@ namespace Lab01_2
                 }
                 else
                 {
+                    listViewTwo.Items.Add("3 studs, who contain in name 'i':");
                     var query = collection
-                .Where(p => p.course == 2)
-                .Take(2)
-                .Select(p => p);
+                        .Where(p => p.name.Contains('i'))
+                        .Take(3)
+                        .Select(p => p);
                     foreach (var s in query)
                     {
                         listViewTwo.Items.Add($"{s.name}, {s.course} course, {s.group} group;");

@@ -35,9 +35,9 @@
             this.buttonQuery2 = new System.Windows.Forms.Button();
             this.buttonQuery3 = new System.Windows.Forms.Button();
             this.textBoxSizeOfCollection = new System.Windows.Forms.TextBox();
-            this.textBoxOne = new System.Windows.Forms.TextBox();
             this.labelSizeOfCollection = new System.Windows.Forms.Label();
-            this.textBoxTwo = new System.Windows.Forms.TextBox();
+            this.listViewOne = new System.Windows.Forms.ListView();
+            this.listViewTwo = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // buttonSortAscending
@@ -112,15 +112,6 @@
             this.textBoxSizeOfCollection.Size = new System.Drawing.Size(77, 26);
             this.textBoxSizeOfCollection.TabIndex = 6;
             // 
-            // textBoxOne
-            // 
-            this.textBoxOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxOne.Location = new System.Drawing.Point(51, 276);
-            this.textBoxOne.Multiline = true;
-            this.textBoxOne.Name = "textBoxOne";
-            this.textBoxOne.Size = new System.Drawing.Size(182, 150);
-            this.textBoxOne.TabIndex = 7;
-            // 
             // labelSizeOfCollection
             // 
             this.labelSizeOfCollection.AutoSize = true;
@@ -131,23 +122,34 @@
             this.labelSizeOfCollection.TabIndex = 9;
             this.labelSizeOfCollection.Text = "Размер коллекции:";
             // 
-            // textBoxTwo
+            // listViewOne
             // 
-            this.textBoxTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxTwo.Location = new System.Drawing.Point(318, 276);
-            this.textBoxTwo.Multiline = true;
-            this.textBoxTwo.Name = "textBoxTwo";
-            this.textBoxTwo.Size = new System.Drawing.Size(182, 150);
-            this.textBoxTwo.TabIndex = 10;
+            this.listViewOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listViewOne.Location = new System.Drawing.Point(62, 276);
+            this.listViewOne.Name = "listViewOne";
+            this.listViewOne.Size = new System.Drawing.Size(183, 150);
+            this.listViewOne.TabIndex = 11;
+            this.listViewOne.UseCompatibleStateImageBehavior = false;
+            this.listViewOne.View = System.Windows.Forms.View.List;
+            // 
+            // listViewTwo
+            // 
+            this.listViewTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listViewTwo.Location = new System.Drawing.Point(307, 276);
+            this.listViewTwo.Name = "listViewTwo";
+            this.listViewTwo.Size = new System.Drawing.Size(183, 150);
+            this.listViewTwo.TabIndex = 12;
+            this.listViewTwo.UseCompatibleStateImageBehavior = false;
+            this.listViewTwo.View = System.Windows.Forms.View.List;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 438);
-            this.Controls.Add(this.textBoxTwo);
+            this.Controls.Add(this.listViewTwo);
+            this.Controls.Add(this.listViewOne);
             this.Controls.Add(this.labelSizeOfCollection);
-            this.Controls.Add(this.textBoxOne);
             this.Controls.Add(this.textBoxSizeOfCollection);
             this.Controls.Add(this.buttonQuery3);
             this.Controls.Add(this.buttonQuery2);
@@ -174,9 +176,9 @@
         private System.Windows.Forms.Button buttonQuery2;
         private System.Windows.Forms.Button buttonQuery3;
         private System.Windows.Forms.TextBox textBoxSizeOfCollection;
-        private System.Windows.Forms.TextBox textBoxOne;
         private System.Windows.Forms.Label labelSizeOfCollection;
-        private System.Windows.Forms.TextBox textBoxTwo;
+        private System.Windows.Forms.ListView listViewOne;
+        private System.Windows.Forms.ListView listViewTwo;
     }
 }
 

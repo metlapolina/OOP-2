@@ -23,8 +23,8 @@ namespace Lab01_2
         {
             try
             {
-                textBoxOne.Text = "";
-                textBoxTwo.Text = "";
+                listViewOne.Clear();
+                listViewTwo.Clear();
                 if (textBoxSizeOfCollection.Text == "" || textBoxSizeOfCollection.Text == "0")
                 {
                     this.collection = null;
@@ -42,7 +42,7 @@ namespace Lab01_2
                     }
                     foreach(Student s in collection)
                     {
-                        textBoxOne.Text += $"{s.name}, {s.course} course, {s.group} group;   ";
+                        listViewOne.Items.Add($"{s.name}, {s.course} course, {s.group} group;");
                     }
                 }
             }
@@ -57,7 +57,7 @@ namespace Lab01_2
         {
             try
             {
-                textBoxTwo.Clear();
+                listViewTwo.Clear();
                 if(collection==null || collection.Count == 0)
                 {
                     throw new Exception("Error!\nCollection is empty!");
@@ -67,7 +67,7 @@ namespace Lab01_2
                     collection.Sort();
                     foreach (Student s in collection)
                     {
-                        textBoxTwo.Text += $"{s.name}, {s.course} course, {s.group} group;   ";
+                        listViewTwo.Items.Add($"{s.name}, {s.course} course, {s.group} group;");
                     }
                 }
             }
@@ -81,7 +81,7 @@ namespace Lab01_2
         {
             try
             {
-                textBoxTwo.Clear();
+                listViewTwo.Clear();
                 if (collection == null || collection.Count == 0)
                 {
                     throw new Exception("Error!\nCollection is empty!");
@@ -92,7 +92,7 @@ namespace Lab01_2
                     collection.Reverse();
                     foreach (Student s in collection)
                     {
-                        textBoxTwo.Text += $"{s.name}, {s.course} course, {s.group} group; ";
+                        listViewTwo.Items.Add($"{s.name}, {s.course} course, {s.group} group;");
                     }
                 }
             }
@@ -106,7 +106,7 @@ namespace Lab01_2
         {
             try
             {
-                textBoxTwo.Clear();
+                listViewTwo.Clear();
                 if (collection == null || collection.Count == 0)
                 {
                     throw new Exception("Error!\nCollection is empty!");
@@ -118,7 +118,7 @@ namespace Lab01_2
                         .Select(p => p);
                     foreach (var s in query)
                     {
-                        textBoxTwo.Text += $"{s.name}, {s.course} course, {s.group} group; ";
+                        listViewTwo.Items.Add($"{s.name}, {s.course} course, {s.group} group;");
                     }
                 }
             }
@@ -132,7 +132,7 @@ namespace Lab01_2
         {
             try
             {
-                textBoxTwo.Clear();
+                listViewTwo.Clear();
                 if (collection == null || collection.Count == 0)
                 {
                     throw new Exception("Error!\nCollection is empty!");
@@ -144,7 +144,7 @@ namespace Lab01_2
                         .Select(p => p);
                     foreach (var s in query)
                     {
-                        textBoxTwo.Text += $"{s.name}, {s.course} course, {s.group} group; ";
+                        listViewTwo.Items.Add($"{s.name}, {s.course} course, {s.group} group;");
                     }
                 }
             }
@@ -158,7 +158,7 @@ namespace Lab01_2
         {
             try
             {
-                textBoxTwo.Clear();
+                listViewTwo.Clear();
                 if (collection == null || collection.Count == 0)
                 {
                     throw new Exception("Error!\nCollection is empty!");
@@ -171,7 +171,7 @@ namespace Lab01_2
                 .Select(p => p);
                     foreach (var s in query)
                     {
-                        textBoxTwo.Text += $"{s.name}, {s.course} course, {s.group} group; ";
+                        listViewTwo.Items.Add($"{s.name}, {s.course} course, {s.group} group;");
                     }
                 }
             }

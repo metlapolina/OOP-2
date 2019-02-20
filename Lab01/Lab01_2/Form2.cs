@@ -15,6 +15,7 @@ namespace Lab01_2
         public Form2()
         {
             InitializeComponent();
+
         }
 
         private List<Student> collection;

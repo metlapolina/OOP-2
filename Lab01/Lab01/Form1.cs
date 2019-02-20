@@ -29,37 +29,56 @@ namespace Lab01
 
         private void button_click(object sender, EventArgs e)
         {
-            if(textBox1.Text == "0" || isOperationPerformed)
+            try
             {
-                textBox1.Clear();
-            }
-            isOperationPerformed = false;
-            Button button = (Button)sender;
-            if (button.Text == ",")
-            {
-                if(!textBox1.Text.Contains(","))
+                if (textBox1.Text == "0" || isOperationPerformed)
+                {
+                        textBox1.Clear();
+                }
+                isOperationPerformed = false;
+                Button button = (Button)sender;
+                if (button.Text == ",")
+                {
+                    if (textBox1.Text[0] == ',')
+                        throw new Exception("Неверный формат!");
+                    if (!textBox1.Text.Contains(","))
+                        textBox1.Text = textBox1.Text + button.Text;
+                }
+                else
                     textBox1.Text = textBox1.Text + button.Text;
             }
-            else
-                textBox1.Text = textBox1.Text + button.Text;
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void operator_click(object sender, EventArgs e)
         {
-            Button button = (Button)sender;
-            if (result != 0)
+            try
             {
-                //buttonEqual.PerformClick();
-                operationPerformed = button.Text;
-                labelCurrentOperation.Text = result + " " + operationPerformed;
-                isOperationPerformed = true;
+                if (textBox1.Text[0] == '+' || textBox1.Text[0] == '-' || textBox1.Text[0] == '*' || textBox1.Text[0] == '/' || textBox1.Text[0] == '%')
+                    throw new Exception("Неверный формат");
+
+                Button button = (Button)sender;
+                if (result != 0)
+                {
+                    operationPerformed = button.Text;
+                    labelCurrentOperation.Text = result + " " + operationPerformed;
+                    isOperationPerformed = true;
+                }
+                else
+                {
+                    operationPerformed = button.Text;
+                    result = double.Parse(textBox1.Text);
+                    labelCurrentOperation.Text = result + " " + operationPerformed;
+                    isOperationPerformed = true;
+                    znak = true;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                operationPerformed = button.Text;
-                result = double.Parse(textBox1.Text);
-                labelCurrentOperation.Text = result + " " + operationPerformed;
-                isOperationPerformed = true;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -113,6 +132,10 @@ namespace Lab01
 
         private void buttonPlusMinus_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text[0]=='-')
+            {
+                znak = false;
+            }
             if (znak)
             {
                 textBox1.Text = "-" + textBox1.Text;
@@ -145,6 +168,20 @@ namespace Lab01
         private void buttonMMinus_Click(object sender, EventArgs e)
         {
             Calc.M_Sub(double.Parse(textBox1.Text));
+        }
+        
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if(e.KeyValue!=8 && e.KeyValue!=13)
+                throw new Exception("Неверный формат");
+            }
+            catch (Exception ex)
+            {
+                textBox1.Text = "0";
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
